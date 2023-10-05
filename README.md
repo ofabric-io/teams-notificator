@@ -52,10 +52,6 @@ Integrating this project into your CI/CD pipeline is straightforward. You can us
 
 4. **Monitor Teams Channel**: After integration, monitor the designated Teams channel for build notifications. The application will send messages containing build information, along with any custom messages or URLs you specify.
 
-## Customization
-
-You can customize the message template by modifying the `generic.json` file located in the `templates` folder within the Docker image. This file defines the structure of the Teams message, allowing you to tailor it to your requirements. To apply custom templates, you may need to create a custom Docker image with your modified template file.
-
 ## Error Handling
 
 The application checks for the presence of required environment variables and throws an error if any are missing. Ensure that all required environment variables are properly configured in your CI/CD tool's settings to prevent errors during the build notification process.

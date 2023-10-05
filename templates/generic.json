@@ -1,0 +1,74 @@
+{
+    "type": "message",
+    "attachments": [
+        {
+            "contentType": "application/vnd.microsoft.card.adaptive",
+            "content": {
+                "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+                "version": "1.5",
+                "type": "AdaptiveCard",
+                "body": [
+                    {
+                    "type": "Container",
+                    "style": "emphasis",
+                    "items": [
+                        {
+                        "type": "ColumnSet",
+                        "columns": [
+                            {
+                            "type": "Column",
+                            "items": [
+                                {
+                                "type": "TextBlock",
+                                "size": "large",
+                                "weight": "bolder",
+                                "text": "**BUILD REPORT**",
+                                "style": "heading",
+                                "wrap": "true"
+                                }
+                            ],
+                            "width": "stretch"
+                            }
+                        ]
+                        }
+                    ],
+                    "bleed": "true"
+                    },
+                    {
+                    "type": "Container",
+                    "items": [
+                        {
+                        "type": "TextBlock",
+                        "text": "{{PROJECT}}", 
+                        "weight": "bolder"
+                        },
+                        {
+                        "type": "FactSet",
+                        "spacing": "large",
+                        "facts": [
+                            {
+                            "title": "Submitted By",
+                            "value": "**{{COMMIT_AUTHOR}}**  {{COMMIT_AUTHOR_EMAIL}}"
+                            },
+                            {
+                            "title": "Status",
+                            "value": "{{BUILD_STATUS}}"
+                            },
+                            {
+                            "title": "Commited",
+                            "value": "{{COMMIT_TIMESTAMP}}"
+                            },
+                            {
+                            "title": "Branch",
+                            "value": "{{BRANCH}}"
+                            }
+                        ]
+                        }
+                    ]
+                    }
+                ],
+                "fallbackText": "This card requires Adaptive Cards v1.5 support to be rendered properly."
+            }
+        }
+    ]
+}

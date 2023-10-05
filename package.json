@@ -1,0 +1,17 @@
+{
+  "name": "teams-notificator",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Fabrício Santos",
+  "license": "MIT",
+  "extension": "js",
+  "dependencies": {
+    "axios": "^1.5.1",
+    "mustache": "^4.2.0"
+  }
+}
